@@ -1,0 +1,144 @@
+\let\negmedspace\undefined{}
+\let\negthickspace\undefined{}
+
+\documentclass{beamer}
+\usepackage{amsthm}
+ \usepackage{gensymb}
+ \usepackage{polynom}
+\usepackage{amssymb}
+%
+  \usepackage{stfloats}
+\usepackage{bm} 
+ \usepackage{longtable}
+ \usepackage{enumitem}
+ \usepackage{mathtools}
+ \usepackage{tikz}
+  %  \usepackage[breaklinks=true]{hyperref}
+  \usepackage{listings}
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                        
+\usepackage{calc}                                             
+     \usepackage{multirow}                                         
+     \usepackage{hhline}                                           
+     \usepackage{ifthen}                                           
+     \usepackage{lscape}     
+\usetheme{CambridgeUS}
+\DeclareMathOperator*{\Res}{Res}
+\DeclareMathOperator*{\equals}{=}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+% \renewcommand\thesectiondis{\arabic{section}}
+% \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+% \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+\hyphenation{op-tical net-works semi-conduc-tor}
+ \def\inputGnumericTable{}                                 %%
+\lstset{ 
+frame=single,
+breaklines=true,
+columns=fullflexible
+}
+
+% \newtheorem{theorem}{Theorem}[section]
+% \newtheorem{problem}{Problem}
+% \newtheorem{proposition}{Proposition}[section]
+% \newtheorem{lemma}{Lemma}[section]
+% \newtheorem{corollary}[theorem]{Corollary}
+% \newtheorem{example}{Example}[section]
+% \newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\newcommand*\circled[1]{\tikz[baseline= (char.base)]{
+    \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.]}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left[#1\right.]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.)}
+\providecommand{\rbrak}[1]{\ensuremath{\left[#1\right.]}}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+% \newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\renewcommand{\thetable}{\arabic{table}} 
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure{}
+\let\vec\mathbf{}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 11 Papoulis ex 8.30}
+\author{Gunjit Mittal (AI21BTECH11011)}
+\date{\today}
+\logo{\large \LaTeX}
+\begin{document} 
+\begin{frame}
+  \titlepage{}
+\end{frame}
+\logo{}
+\begin{frame}{Outline} 
+  \tableofcontents
+\end{frame}
+% Download all python codes from 
+% \begin{lstlisting}
+% https://github.com/GunjitMittal/Assignment6/tree/main/Assignment6/code
+% \end{lstlisting}     
+% Download all latex codes from 
+% \begin{lstlisting}
+% https://github.com/GunjitMittal/Assignment6/tree/main/Assignment6 
+% \end{lstlisting} 
+\section{Question} 
+\begin{frame}{Question}
+In a production process, the number of defective units per hour is a poisson distributed random variable x with parameter $\lambda=5$. A new process is introduced, and it is observed that the hourly defectives in a 22-hour period are \\
+\begin{align*}
+    x_i = 3~0~5~4~2~6~4~1~5~3~7~4~0~8~3~2~4~3~6~5~6~9
+\end{align*}
+Test the hypothesis $\lambda=5$ against $\lambda<5$ with $\alpha=0.05$.
+\end{frame}
+\section{Solution} 
+\begin{frame}{Solution} 
+  Hypothesis $H_0 \implies \lambda=\lambda_0=5$ and $H_1 \implies \lambda<5$\\
+  Given X = Poisson (5)\\
+  Using approximation, X can be considered as a Normal (5,$\sqrt{5}$)\\
+  Since we have to prove the hypothesis against the type $\theta<\theta_0$, We accept $H_0$ iff $q>z_\alpha$ and $z_\alpha = z_{0.05} = -1.64$
+  \begin{align}
+    q = \frac{\bar{x}-\lambda_0}{s/\sqrt{n}}
+  \end{align}
+  Where $\bar{x} = \frac{90}{22}= 4.09$, s is variance and n is number of observations = 22
+  \begin{align}
+    q = \frac{4.09-5}{\sqrt{5}/\sqrt{5}} = -0.91
+  \end{align}
+    $\implies q>z_\alpha$ so the hypothesis $\lambda=5$ is accepted.
+\end{frame}
+\end{document}     
